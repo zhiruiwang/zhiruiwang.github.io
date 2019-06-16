@@ -14,3 +14,12 @@ And as summer is coming, which is the best season of the city, I have noticed th
 With these questions in mind, I found the [Boston AirBNB Data](https://www.kaggle.com/airbnb/boston) on Kaggle. Let's explore the data and find out the answer to my questions!
 
 ## The vibe of each Boston neighborhood
+Maybe many of you are not from Boston area and do not have a clear view of which part of Boston is what, below is a map of Boston with all the neighborhood and districts of Boston:
+![boston district map](https://maps-boston.com/img/0/boston-districts-map.jpg)
+*Photo via maps-boston.com*
+
+When we group by the neighborhood of each listing  in the AirBNB data, here is a bar chart showing the frequency of listing in each neighborhood:
+![freq_listing_neighborhood](../images/freq_listing_neighborhood.png)
+
+We can see that the majority of the AirBNB housings are in the south-western side of Boston, which makes total sense since the north-eastern side is all harbor, port and airport area. We will take the top ten neighborhood to do further analysis.
+
