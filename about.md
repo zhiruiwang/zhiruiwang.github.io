@@ -8,7 +8,7 @@ I am data scientist at Boston Consulting Group, focused on Marketing, Sales and 
 
 ### More Information
 
-I am keen on exploring deep learning and reinforcement learning techniques and applying them to my case work, however I always found out XGBoost is a fast and effiecient universal solution. So now I am a huge XGBoost fan, but still with fund knowledge of state-of-the-art deep learning techniques in computer vision, natural language process and reinforcement learning.
+I am keen on exploring deep learning and reinforcement learning techniques and applying them to my case work, however I always found out XGBoost is a fast and efficient universal solution. So now I am a huge XGBoost fan, but still with fund knowledge of state-of-the-art deep learning techniques in computer vision, natural language processing and reinforcement learning.
 
 ### Contact me
 
