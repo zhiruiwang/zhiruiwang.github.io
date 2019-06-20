@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Boston AirBNB Data Exploration
+title:  Using data to understand the market for AirBnB rentals in Boston
 ---
 
 ![Boston Skyline](https://cdn10.bostonmagazine.com/wp-content/uploads/sites/2/2017/11/boston-skyline.jpg)
