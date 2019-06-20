@@ -33,7 +33,7 @@ Since churn is a binary variable, metrics sepcific to classification problem sho
 
 
 # Analysis
-
+All the following analysis can be found in my [GitHub repo](https://github.com/zhiruiwang/Sparkify_Churn_Prediction). Please notice that I am using Databricks to host the notebook and cluster, so downloading and viewing the html version would have better user experience.
 ## Data Exploration
 Our data is a sample of an event log between October and November 2018. In our 237 MB sample data we have 543705 events of 448 users with the following 18 features:
 
