@@ -13,6 +13,8 @@ And as summer is coming, which is the best season of the city, I have noticed th
 
 With these questions in mind, I found the [Boston AirBNB Data](https://www.kaggle.com/airbnb/boston) on Kaggle. Let's explore the data and find out the answer to my questions!
 
+The code for analysis and generating the data visualization can be find in this [GitHub repo](https://github.com/zhiruiwang/Boston_AirBNB/blob/master/Boston-Airbnb.ipynb)
+
 ## The vibe of each Boston neighborhood
 Maybe many of you are not from Boston area and do not have a clear view of which part of Boston is what, below is a map of Boston with all the neighborhood and districts of Boston:
 ![boston district map](https://maps-boston.com/img/0/boston-districts-map.jpg)
