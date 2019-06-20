@@ -186,7 +186,11 @@ After the feature creation, the data is reduced to user-level, and split into tr
 
 Pysparkling is a machine learning package that is developed by H2O. It enables people to use very user-friendly API on Spark, without dealing with vecterization of categorical variables or any other Spark ML libary complications. It also has state-of-the-art algorithms like XGBoost or nerual networks. Since in this project we are dealing with medium size tabular data, so XGBoost would be our best choice.
 
+![pysparkling](https://image.slidesharecdn.com/20161008washingtondcpydata-161010182210/95/h2o-pysparkling-water-2-638.jpg?cb=1485539905)
+
 eXtreme Gradient Boosting(XGBoost) is a start-of-the-art ensemble tree algorithms. It fits iterative trees that is based on the residual of the previous trees, and has some optimization algorithms that utilize the Hessian matrix(matrix of second order derivatives) of the loss function. Unlike other gradient boosting trees it has found a smart way to distributed compute the tree growing process. And it also has the ability to deal with missing value internally.
+
+![xgboost](https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png)
 
 We first initialize the pysparkling h2ocontext, turn Spark dataframe into h2o frame, which takes no time because the internal of Spark dataframe and h2o frame is share the same memory. Instead of turning categorical variable into dummies and then vecterize, we just need to tell h2o frame to turn those columns into factor, and the 'dummize' will take place under the hood.
 
