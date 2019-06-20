@@ -192,14 +192,13 @@ We will use the 'lossguide' growth policy and 'hist' tree method, in order to mi
 
 After first, we will use 30 trees, fit on the training data and track the performance of validation data. We can check the learning curve of the model, the learning curve is defined as the change of metrics log loss by the number of trees increase, for both training and validation data:
 
-#TODO: Learning curve for 30 trees
-
+![learning_curve_30](..\images\2019-06-20-Sparkify_Churn_Prediction\learning_curve_30.png)
 
 
 ## Refinement
 
 We can clearly see from the above plot that the training loss is always decreasing, while the validation loss starts to increase after 15 trees. We can reduce the number of trees to 15 trees and check the result:
-![tenure_days](..\images\2019-06-20-Sparkify_Churn_Prediction\tenure_days.png)
+![learning_curve_15](..\images\2019-06-20-Sparkify_Churn_Prediction\learning_curve_15.png)
 
 Now the learning curve for both training and validation sets are decreasing as the number of tree increase.
 
@@ -207,19 +206,23 @@ Now the learning curve for both training and validation sets are decreasing as t
 
 ## Model Evaluation and Validation
 The AUC from the training, validation and testing data are:
+
 | Dataset | AUC   |
 |-------|-------|
-| Train |     |
-| Validation |    |
-| Test | 0.88 |
+| Train | 0.94    |
+| Validation |  0.89  |
+| Test | 0.84 |
 
 We can see that the model performance is pretty robust across different dataset, and the AUC is high enugh.
 
-#TODO: ROC curve
-If we want to have a true positive rate of, then the false positive rate is only, which is good when we want to provide incentives to the users.
+Then let's check the ROC curve: 
+![roc_curve](..\images\2019-06-20-Sparkify_Churn_Prediction\roc_curve.png)
+
+
+If we want to have a true positive rate of 0.7, then the false positive rate is only 0.2, which is good when we want to provide incentives to the users.
 
 Another good feature of tree based model is, we can look at the variable importance plot. Variable importance is defined as number of splits each feature is splitted on in the model.
-#TODO: variable importance plot
+![varimp_plot](..\images\2019-06-20-Sparkify_Churn_Prediction\varimp_plot.png)
 
 We can see that the top important feature is the tenure day, and all the top features are align with our exploratory analysis.
 
@@ -230,7 +233,7 @@ XGBoost also has a very good default parameter set, which generally yield pretty
 # Conclusion
 
 ## Reflection
-The work presented here shows how features can be engineered from event logs to create data to be used in machine learning models to predict customer churn. We defined customer churn as to whether a user visited the Cancellation Confirmation page. We used a sample dataset in a Databricks pyspark cluster that can be easily scaled to much larger datasets (big data). We trained a XGBoost model on the engineered features, which give us AUC of 0.88 in the testing data. The variable importance plot is inline with the exploratory analysis we did before implementing the model. Overall spearking, we have a pretty great model that can predict customer churn! Nice job!
+The work presented here shows how features can be engineered from event logs to create data to be used in machine learning models to predict customer churn. We defined customer churn as to whether a user visited the Cancellation Confirmation page. We used a sample dataset in a Databricks pyspark cluster that can be easily scaled to much larger datasets (big data). We trained a XGBoost model on the engineered features, which give us AUC of 0.84 in the testing data. The variable importance plot is inline with the exploratory analysis we did before implementing the model. Overall spearking, we have a pretty great model that can predict customer churn! Nice job!
 
 ![Nice job](https://sayingimages.com/wp-content/uploads/you-did-good-job-meme.jpg)
 
