@@ -15,11 +15,13 @@ The data I used in the project can be found in this [link](https://s3.amazonaws.
 
 ## Problem Statement
 Imagine you are working on the data team for a popular digital music service similar to Spotify or Pandora. Many of their users stream their favorite songs to your service everyday either using the free tier that place advertisements between the songs or use the premium subscription model, where they stream music as free but pay a monthly flat rate. Users can upgrade, downgrade or cancel their service at any time, so it's crucial to maker sure your users love the service. 
+
 ![Spotify](https://www.thestar.com.my/~/media/online/2018/09/06/12/22/spotifybloomberg.ashx/?w=620&h=413&crop=1&hash=B2A1B10B976D404846953E29B7629E919E45F163)
 
 *Photo via thestar.com*
 
 Every time a user interacts with the service while they are playing songs, logging out, like a song with a thumbs up, hearing an ad, or downgrading the service, it generates data. All the data contains key insights for keeping your users happy and helping your business thrive.
+
 ![Pandora](https://image.cnbcfm.com/api/v1/image/104520466-GettyImages-680026216-pandora.jpg?v=1537788254&w=630&h=419)
 
 *Photo via barrons.com*
@@ -198,6 +200,7 @@ After first, we will use 30 trees, fit on the training data and track the perfor
 ## Refinement
 
 We can clearly see from the above plot that the training loss is always decreasing, while the validation loss starts to increase after 15 trees. We can reduce the number of trees to 15 trees and check the result:
+
 ![learning_curve_15](..\images\2019-06-20-Sparkify_Churn_Prediction\learning_curve_15.png)
 
 Now the learning curve for both training and validation sets are decreasing as the number of tree increase.
@@ -216,12 +219,14 @@ The AUC from the training, validation and testing data are:
 We can see that the model performance is pretty robust across different dataset, and the AUC is high enugh.
 
 Then let's check the ROC curve: 
+
 ![roc_curve](..\images\2019-06-20-Sparkify_Churn_Prediction\roc_curve.png)
 
 
 If we want to have a true positive rate of 0.7, then the false positive rate is only 0.2, which is good when we want to provide incentives to the users.
 
 Another good feature of tree based model is, we can look at the variable importance plot. Variable importance is defined as number of splits each feature is splitted on in the model.
+
 ![varimp_plot](..\images\2019-06-20-Sparkify_Churn_Prediction\varimp_plot.png)
 
 We can see that the top important feature is the tenure day, and all the top features are align with our exploratory analysis.
